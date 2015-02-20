@@ -1,0 +1,8 @@
+
+BASEDIR=~nikolas/dunwich/Projects/IL2
+BIN=~nikolas/Projects/IL2/bin/gating/
+
+bash $BIN/gate.manual.prior.sh 
+bash $BIN/gate.manual.prior.sh -g Lymphocytes.Single.Cells.CD4.Memory -b $BASEDIR/PSTAT5-CD25-CD45RA-CD4-FOXP3/pstat5-join/All/Lymphocytes.Single.Cells.CD4/ -c CD25,CD45RA
+bash $BIN/gate.manual.prior.sh -g Lymphocytes.Single.Cells.CD4.Naive -b $BASEDIR/PSTAT5-CD25-CD45RA-CD4-FOXP3/pstat5-join/All/Lymphocytes.Single.Cells.CD4/ -c CD25,CD45RA
+
