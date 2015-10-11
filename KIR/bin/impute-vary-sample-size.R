@@ -1,9 +1,8 @@
-setwd('~nikolas/stats-archive/Papers/KIR/') 
+setwd('/chiswick/data/stats-archive/Papers/KIR/') 
 
-source("Code/impute_functions.R")
+source("impute_functions.R")
 
-
-## niko's calls
+## qPCR calls
 print(load("Data/qPCR/MI-10-datasets.RData"))
 
 ## add ichip sample id
@@ -515,7 +514,7 @@ wbest2 <- rbind(wbest,imp[,colnames(wbest)])
 wbest2$type <- factor(wbest2$type,levels=c("qPCR sample","Extended sample","qPCR + Imputation"))
 
 
-pdf("~/Words/papers/KIR/figures/fig-rs592645-v2.pdf",height=6,width=8)
+pdf("fig-rs592645-v2.pdf",height=6,width=8)
 ggplot(wbest2, aes(x=theta,y=R,col=Copies)) +
   geom_point(data=subset(wbest2, Copies=="?-?"),size=1) +
   geom_point(data=subset(wbest2, Copies!="?-?"),size=1) +
@@ -552,7 +551,7 @@ loo.all <- lapply(geno, function(g) {
 })
 
 
-  loo <- as.data.frame(do.call("cbind",lapply(loo.all, function(x) as.character(x[,3]))))
+loo <- as.data.frame(do.call("cbind",lapply(loo.all, function(x) as.character(x[,3]))))
 loo$y.obs <- loo.all[[1]][,4]
 loo$sample <- loo.all[[1]][,5]
 
