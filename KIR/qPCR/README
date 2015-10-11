@@ -1,0 +1,5 @@
+
+raw: contains the Ct values as read from the LightCycler 384 well plates
+processed: contains the normalised DeltaCt values grouped by replicate resulting in 96 well plates
+
+MI-10-datasets.RData: contains the 10 simulated data sets obtained from the processed/posteriors.csv
