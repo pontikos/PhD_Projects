@@ -1,4 +1,4 @@
-setwd('~nikolas/stats-archive/Papers/KIR/') 
+setwd('/chiswick/data/stats-archive/Papers/KIR/') 
 
 source("impute_functions.R")
 
