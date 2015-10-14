@@ -24,8 +24,7 @@ geno <- geno2
 
 ################################################################################
 
-#setwd('~nikolas/stats-archive/Papers/KIR/') 
-setwd('/home/chrisw/People/Niko/KIR')
+setwd('~nikolas/stats-archive/Papers/KIR/Data/') 
 
 ## prep data
 
