@@ -1,4 +1,6 @@
-setwd('/chiswick/data/stats-archive/Papers/KIR/') 
+setwd('/chiswick/data/stats-archive/Papers/KIR/')
+
+library(ggplot2)
 
 source("impute_functions.R")
 
@@ -23,10 +25,7 @@ str(geno2[[1]])
 geno <- geno2
 
 ################################################################################
-
-setwd('~nikolas/stats-archive/Papers/KIR/Data/') 
-
-## prep data
+ ## prep data
 
 ## Illumina files for local/predictive SNPs
 cs.cols <- c( "Sample_ID", "SNP_Name", "Chr", "Position", "GC_Score",
@@ -569,4 +568,3 @@ mn <- rowMeans(loo)
 for(n in names(datasets))
   loo.all[[n]]$group <- n
 loo.best <- loo <- do.call("rbind",loo.all)
-library(ggplot2)
